@@ -11,6 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.example.recipeapp"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -53,6 +54,7 @@ android {
 dependencies {
 
     //view Model
+    //noinspection GradleDependency
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     // Retrofit for network calls
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -61,12 +63,15 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
    //Coroutines Image Loader image loading from coroutine
 
+    //noinspection GradleDependency
     implementation ("androidx.navigation:navigation-compose:2.7.4") // latest as of now
     //implementation ("androidx.compose.runtime:runtime-livedata:1.6.0")
     implementation("io.coil-kt:coil:2.4.0")
     implementation("io.coil-kt:coil-compose:2.4.0")
     implementation(platform("androidx.compose:compose-bom:2024.09.03"))
+    //noinspection GradleDependency
     implementation("androidx.core:core-ktx:1.12.0")
+    //noinspection GradleDependency
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
